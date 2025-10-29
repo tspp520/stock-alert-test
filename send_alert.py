@@ -11,7 +11,7 @@ if not WEBHOOK_URL:
     raise ValueError("环境变量 WECHAT_WEBHOOK 未设置！")
 
 # 在一分钟内发送 10 条消息，间隔 6 秒
-for i in range(10):
+for i in range(100):
     current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]  # 精确到毫秒
     message = f"[GitHub Actions 测试] 第 {i+1} 条消息 | 执行时间: {current_time}"
 
